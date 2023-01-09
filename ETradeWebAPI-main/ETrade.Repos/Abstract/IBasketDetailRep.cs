@@ -1,0 +1,17 @@
+﻿using ETrade.Core;
+using ETrade.DTO;
+using ETrade.Entities.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ETrade.Repos.Abstract
+{
+    public interface IBasketDetailRep : IBaseRepository<BasketDetail>
+    {
+        public List<BasketDetailDTO> BasketDetailDTOs(int basketMasterId);
+        public bool CheckProductBasket(int productId);
+    }
+}
